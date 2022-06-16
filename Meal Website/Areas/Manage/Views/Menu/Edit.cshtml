@@ -1,0 +1,35 @@
+﻿@model Menu
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label"></label>
+        <input asp-for="ImageUrl" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Category" class="form-label"></label>
+        <textarea asp-for="Category" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control">
+    </div>
+    @*<div class="mb-4">
+        <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories,nameof(Category.Id),nameof(Category.Name)))" class="form-select">
+            <option disabled selected>Kateqoriyalar</option>
+        </select>
+    </div>*@
+    <div>
+        <button class="btn btn-secondary" type="submit">Edit</button>
+    </div>
+</form>
